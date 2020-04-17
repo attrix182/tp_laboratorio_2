@@ -1,0 +1,12 @@
+D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\MiCalculadora\bin\Debug\MiCalculadora.exe.config
+D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\MiCalculadora\bin\Debug\MiCalculadora.exe
+D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\MiCalculadora\bin\Debug\MiCalculadora.pdb
+D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\MiCalculadora\bin\Debug\MiCalculadora.xml
+D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\MiCalculadora\obj\Debug\MiCalculadora.vbprojAssemblyReference.cache
+D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\MiCalculadora\obj\Debug\MiCalculadora.Resources.resources
+D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\MiCalculadora\obj\Debug\MiCalculadora.vbproj.GenerateResource.cache
+D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\MiCalculadora\obj\Debug\MiCalculadora.vbproj.CoreCompileInputs.cache
+D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\MiCalculadora\obj\Debug\MiCalculadora.exe
+D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\MiCalculadora\obj\Debug\MiCalculadora.xml
+D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\MiCalculadora\obj\Debug\MiCalculadora.pdb
+D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\MiCalculadora\obj\Debug\MiCalculadora.Form1.resources
