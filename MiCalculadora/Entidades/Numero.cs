@@ -12,6 +12,7 @@ namespace Entidades
         public Numero(double numero) : this(numero.ToString()) { }
 
 
+
         private double ValidarNumero(string strNumero)
         {
 
@@ -31,7 +32,6 @@ namespace Entidades
 
             decimalOut = Convert.ToInt32(binario, 2);
 
-
             return decimalOut.ToString();
         }
 
@@ -41,7 +41,7 @@ namespace Entidades
             long num;
             string resultado = "Valor invalido";
 
-            if (numero > 0 && numero < double.MaxValue)
+            if (numero > 0)
             {
 
                 num = (long)numero;

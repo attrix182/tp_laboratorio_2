@@ -9,13 +9,11 @@ namespace Entidades
         private static string ValidarOperador(string operador)
         {
 
-
-            if (operador.Equals("+") || operador.Equals("/") || operador.Equals("*") || operador.Equals("-"))
+            if (operador.Equals("+") || operador.Equals("-") || operador.Equals("/") || operador.Equals("*"))
             {
                 return operador;
             }
             else { return "+"; }
-
 
         }
 
@@ -42,11 +40,9 @@ namespace Entidades
                     resultado = num1 / num2;
                     break;
 
-
             }
 
             return resultado;
-
 
         }
     }

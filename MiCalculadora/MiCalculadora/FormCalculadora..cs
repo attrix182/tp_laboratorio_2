@@ -72,7 +72,7 @@ namespace MiCalculadora
             Numero numero1 = new Numero(num1);
             Numero numero2 = new Numero(num2);
 
-            double resultado = 0;
+            double resultado;
 
             resultado = Calculadora.Operar(numero1, numero2, operador);
 
