@@ -1,9 +1,0 @@
-D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\Entidades\bin\Debug\netstandard2.0\Entidades.deps.json
-D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\Entidades\bin\Debug\netstandard2.0\Entidades.dll
-D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\Entidades\bin\Debug\netstandard2.0\Entidades.pdb
-D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\Entidades\obj\Debug\netstandard2.0\Entidades.csprojAssemblyReference.cache
-D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\Entidades\obj\Debug\netstandard2.0\Entidades.csproj.CoreCompileInputs.cache
-D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfoInputs.cache
-D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfo.cs
-D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\Entidades\obj\Debug\netstandard2.0\Entidades.dll
-D:\Facultad\Prog Lab\Prog\TPs\MiCalculadora\Entidades\obj\Debug\netstandard2.0\Entidades.pdb
