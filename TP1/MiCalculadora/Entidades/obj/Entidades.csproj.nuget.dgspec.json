@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Facultad\\Prog Lab\\Prog\\TPs\\MiCalculadora\\Entidades\\Entidades.csproj": {}
+    "D:\\Facultad\\Prog Lab\\Prog\\TPs\\TP1\\MiCalculadora\\Entidades\\Entidades.csproj": {}
   },
   "projects": {
-    "D:\\Facultad\\Prog Lab\\Prog\\TPs\\MiCalculadora\\Entidades\\Entidades.csproj": {
+    "D:\\Facultad\\Prog Lab\\Prog\\TPs\\TP1\\MiCalculadora\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Facultad\\Prog Lab\\Prog\\TPs\\MiCalculadora\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "D:\\Facultad\\Prog Lab\\Prog\\TPs\\TP1\\MiCalculadora\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "D:\\Facultad\\Prog Lab\\Prog\\TPs\\MiCalculadora\\Entidades\\Entidades.csproj",
+        "projectPath": "D:\\Facultad\\Prog Lab\\Prog\\TPs\\TP1\\MiCalculadora\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\Luciano\\.nuget\\packages\\",
-        "outputPath": "D:\\Facultad\\Prog Lab\\Prog\\TPs\\MiCalculadora\\Entidades\\obj\\",
+        "outputPath": "D:\\Facultad\\Prog Lab\\Prog\\TPs\\TP1\\MiCalculadora\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Luciano\\AppData\\Roaming\\NuGet\\NuGet.Config",
