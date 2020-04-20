@@ -11,6 +11,8 @@ using Entidades;
 
 namespace MiCalculadora
 {
+
+
     public partial class FormCalculadora : Form
     {
         public FormCalculadora()
@@ -25,6 +27,11 @@ namespace MiCalculadora
 
         }
 
+        /// <summary>
+        /// Asigna el lblResultado con el resultado de la operacion retornada por el metodo Operar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOperar_Click(object sender, EventArgs e)
         {
             string salida;
@@ -38,6 +45,9 @@ namespace MiCalculadora
 
         }
 
+        /// <summary>
+        /// Vacia el contenido de los TextBox, el ComboBox y el Label
+        /// </summary>
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
 
@@ -47,18 +57,35 @@ namespace MiCalculadora
 
         }
 
+        /// <summary>
+        /// Cierra la calculadora
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
 
         }
 
+
+        /// <summary>
+        /// Llama al método DecimalBinario de la clase Numero
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
 
             this.lblResultado.Text = Numero.DecimalBinario(this.lblResultado.Text);
         }
 
+
+        /// <summary>
+        /// Llama al método BinarioDecimal de la clase Numero
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
 
@@ -67,6 +94,13 @@ namespace MiCalculadora
         }
 
 
+        /// <summary>
+        /// Llama al metodo Operar de la clase calculadora para obtener un resultado de una operacion matematica pedida
+        /// </summary>
+        /// <param name="num1">Primer numero</param>
+        /// <param name="num2">Segundo numero</param>
+        /// <param name="operador">Signo que especifica la operacion a realizar</param>
+        /// <returns>Retorna el resultado de la operacion</returns>
         private static double Operar(string num1, string num2, string operador)
         {
 

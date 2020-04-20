@@ -6,21 +6,7 @@ namespace Entidades
 {
     public static class Calculadora
     {
-        /// <summary>
-        /// Valida que el string ingresado sea un operador valido, caso contrario retorna "+"
-        /// </summary>
-        /// <param name="operador">String ingresado</param>
-        /// <returns>Retorna el operador validado</returns>
-        private static string ValidarOperador(string operador)
-        {
 
-            if (operador.Equals("+") || operador.Equals("-") || operador.Equals("/") || operador.Equals("*"))
-            {
-                return operador;
-            }
-            else { return "+"; }
-
-        }
 
         /// <summary>
         /// Realiza una operacion matematica basica entre los parametros recibidos
@@ -57,6 +43,22 @@ namespace Entidades
             return resultado;
 
         }
- 
+
+        /// <summary>
+        /// Valida que el string ingresado sea un operador valido, caso contrario retorna "+"
+        /// </summary>
+        /// <param name="operador">String ingresado</param>
+        /// <returns>Retorna el operador validado</returns>
+        private static string ValidarOperador(string operador)
+        {
+
+            if (operador.Equals("+") || operador.Equals("-") || operador.Equals("/") || operador.Equals("*"))
+            {
+                return operador;
+            }
+            else { return "+"; }
+
+        }
+
     }
 }
