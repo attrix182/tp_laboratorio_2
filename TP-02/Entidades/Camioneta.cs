@@ -9,6 +9,13 @@ namespace Entidades
     public class Camioneta : Vehiculo
     {
         #region "Constructores"
+
+        /// <summary>
+        /// Constructor parametrizado. 
+        /// </summary>
+        /// <param name="marca">Marca de la Camioneta</param>
+        /// <param name="chasis">Chasis de la Camioneta</param>
+        /// <param name="color">Color de la Camioneta</param>
         public Camioneta(EMarca marca, string chasis, ConsoleColor color) : base(chasis, marca, color)
         {
 
@@ -17,7 +24,7 @@ namespace Entidades
 
         #region "Sobrecargas"
         /// <summary>
-        /// Las camionetas son grandes
+        /// Propiedad que retorna el tamaño de la Camioneta(Por defecto Grande)
         /// </summary>
         protected override ETamanio Tamanio
         {
@@ -27,6 +34,10 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Muestra los datos de una Camioneta
+        /// </summary>
+        /// <returns>Retorna los datos en formato de cadena</returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

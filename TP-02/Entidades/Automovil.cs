@@ -26,7 +26,7 @@ namespace Entidades
 
         #region "Constructores"
         /// <summary>
-        /// Por defecto, TIPO será Monovolumen
+        /// Constructor parametrizado. Asigna el tipo(Por defecto, será Monovolumen)
         /// </summary>
         /// <param name="marca"></param>
         /// <param name="chasis"></param>
@@ -37,6 +37,13 @@ namespace Entidades
             tipo = ETipo.Monovolumen;
         }
 
+        /// <summary>
+        /// Constructor parametrizado. Sobrecargado
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
+        /// <param name="tipo"></param>
         public Automovil(EMarca marca, string chasis, ConsoleColor color, ETipo tipo)
             : this(marca, chasis, color)
         {
@@ -47,7 +54,7 @@ namespace Entidades
 
         #region "Sobrecargas"
         /// <summary>
-        /// Los automoviles son medianos
+        ///Propiedad que retorna el tamaño del Automovil(Por defecto Mediano)
         /// </summary>
         protected override ETamanio Tamanio
         {
@@ -59,7 +66,10 @@ namespace Entidades
 
       
 
-       
+       /// <summary>
+       /// Muestra los datos de un Automovil
+       /// </summary>
+       /// <returns>Retornara una cadena con los datos</returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

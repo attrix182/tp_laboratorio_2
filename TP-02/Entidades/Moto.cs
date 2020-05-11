@@ -9,6 +9,13 @@ namespace Entidades
     public class Moto : Vehiculo
     {
         #region "Constructores"
+
+        /// <summary>
+        ///  Constructor parametrizado. 
+        /// </summary>
+        /// <param name="marca">Marca de la Moto</param>
+        /// <param name="chasis">Chasis  de la Moto</param>
+        /// <param name="color">Color de la Moto</param>
         public Moto(EMarca marca, string chasis, ConsoleColor color) : base(chasis, marca, color)
         {
            
@@ -17,7 +24,7 @@ namespace Entidades
 
         #region "Sobrecargas"
         /// <summary>
-        /// Las motos son chicas
+        ///Propiedad que retorna el tamaño de la Moto(Por defecto Chico)
         /// </summary>
         protected override ETamanio Tamanio
         {
@@ -27,6 +34,10 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Muestra los datos de una Moto
+        /// </summary>
+        /// <returns>Retorna los datos en formato de cadena</returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

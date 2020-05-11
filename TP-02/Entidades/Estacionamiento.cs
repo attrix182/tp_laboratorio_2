@@ -27,10 +27,19 @@ namespace Entidades
         #endregion
 
         #region "Constructores"
+
+        /// <summary>
+        ///  Constructor parametrizado. inicializa la lista de vehiculos
+        /// </summary>
         private Estacionamiento()
         {
             this.vehiculos = new List<Vehiculo>();
         }
+
+        /// <summary>
+        ///  Constructor parametrizado. Inicializa el espacio disponible
+        /// </summary>
+        /// <param name="espacioDisponible">Espacio disponible</param>
         public Estacionamiento(int espacioDisponible) : this()
         {
             this.espacioDisponible = espacioDisponible;
@@ -41,7 +50,7 @@ namespace Entidades
         /// <summary>
         /// Muestro el estacionamiento y TODOS los vehículos
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retornara todos los vehiculos que estan en el estacionamiento</returns>
         public override string ToString()
         {
             return Estacionamiento.Mostrar(this, ETipo.Todos);

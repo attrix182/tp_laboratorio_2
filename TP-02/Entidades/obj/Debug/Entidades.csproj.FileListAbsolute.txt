@@ -17,3 +17,9 @@ D:\Usuarios\Lucho\Facultad\Lab-Prog\Prog\TPs\TP2\TP-02 - Alumno\TP-02\Entidades\
 D:\Usuarios\Lucho\Facultad\Lab-Prog\Prog\TPs\TP2\TP-02 - Alumno\TP-02\Entidades\obj\Debug\Entidades.pdb
 D:\Usuarios\Lucho\Facultad\Lab-Prog\Prog\TPs\TP2\TP-02 - Alumno\TP-02\Entidades\bin\Debug\Entidades.dll
 D:\Usuarios\Lucho\Facultad\Lab-Prog\Prog\TPs\TP2\TP-02 - Alumno\TP-02\Entidades\bin\Debug\Entidades.pdb
+D:\Usuarios\Lucho\escritorio\gitt\tp_laboratorio_2\TP-02\Entidades\bin\Debug\Entidades.dll
+D:\Usuarios\Lucho\escritorio\gitt\tp_laboratorio_2\TP-02\Entidades\bin\Debug\Entidades.pdb
+D:\Usuarios\Lucho\escritorio\gitt\tp_laboratorio_2\TP-02\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+D:\Usuarios\Lucho\escritorio\gitt\tp_laboratorio_2\TP-02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+D:\Usuarios\Lucho\escritorio\gitt\tp_laboratorio_2\TP-02\Entidades\obj\Debug\Entidades.dll
+D:\Usuarios\Lucho\escritorio\gitt\tp_laboratorio_2\TP-02\Entidades\obj\Debug\Entidades.pdb
