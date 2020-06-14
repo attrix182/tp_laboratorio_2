@@ -21,7 +21,7 @@ namespace ClasesInstanciables
         public EEstadoCuenta estadoCuenta;
 
         /// <summary>
-        /// Construcroe por defecto de la clase
+        /// Constructor por defecto de la clase
         /// </summary>
         public Alumno() : base()
         {

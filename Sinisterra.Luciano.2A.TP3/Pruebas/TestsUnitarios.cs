@@ -14,7 +14,7 @@ namespace Pruebas
     {
 
         /// <summary>
-        /// 
+        /// Test unitario que crea un Alumno con un DNI invalido y prueba la excepcion DniInvalidoException
         /// </summary>
         [TestMethod]
         public void TestDniInvalido()
@@ -30,7 +30,7 @@ namespace Pruebas
         }
 
         /// <summary>
-        /// 
+        /// Test que crea un Alumno con Nacionalidad invalida para comprobar el funcionamiento de NacionalidadInvalidaException
         /// </summary>
         [TestMethod]
         public void TestNacionalidadInvalida()
@@ -48,7 +48,7 @@ namespace Pruebas
 
 
         /// <summary>
-        /// 
+        /// Test que crea una universidad sin profesor para probar SinProfesorException
         /// </summary>
         [TestMethod]
         public void TestSinProfesor()
@@ -66,7 +66,7 @@ namespace Pruebas
 
 
         /// <summary>
-        /// 
+        /// Test unitario que crear e intenta agregar DOS Alumnos IGUALES, para comprobar AlumnoRepetidoException
         /// </summary>
         [TestMethod]
         public void TestAlumnoRepetido()
@@ -88,6 +88,54 @@ namespace Pruebas
         }
 
 
+
+
+
+
+
+        /// <summary>
+        /// Test que mediante AllItemsAreNotNull, Comprueba si todos los elementos de la colección Alumnos
+        /// no son nulos.
+        /// </summary>
+        [TestMethod]
+        public void TestColeccionAlumnos()
+        {
+
+            Universidad uni = new Universidad();
+
+            CollectionAssert.AllItemsAreNotNull(uni.Alumnos);
+
+        }
+
+
+
+
+        /// <summary>
+        /// Test que mediante AllItemsAreNotNull, Comprueba si todos los elementos de la colección Jornadas
+        /// no son nulos
+        /// </summary>
+        [TestMethod]
+        public void TestColeccionJornadas()
+        {
+
+            Universidad uni = new Universidad();
+
+            CollectionAssert.AllItemsAreNotNull(uni.Jornadas);
+        }
+
+
+        /// <summary>
+        /// Test que mediante AllItemsAreNotNull, Comprueba si todos los elementos de la colección profesores
+        /// no son nulos
+        /// </summary>
+        [TestMethod]
+        public void TestColeccionProfesores()
+        {
+
+            Universidad uni = new Universidad();
+
+            CollectionAssert.AllItemsAreNotNull(uni.Instructores);
+        }
 
 
 
