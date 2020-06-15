@@ -30,8 +30,14 @@ namespace EntidadesAbstractas
         /// </summary>
         public string Apellido
         {
-            get { return this.apellido; }
-            set { this.apellido = ValidarNombreApellido(value); }
+            get
+            {
+                return this.apellido;
+            }
+            set
+            {
+                this.apellido = ValidarNombreApellido(value);
+            }
         }
 
         /// <summary>
@@ -43,8 +49,14 @@ namespace EntidadesAbstractas
         /// </summary>
         public int DNI
         {
-            get { return this.dni; }
-            set { this.dni = ValidarDni(this.nacionalidad, value); }
+            get
+            {
+                return this.dni;
+            }
+            set
+            {
+                this.dni = ValidarDni(this.nacionalidad, value);
+            }
         }
 
         /// <summary>
@@ -56,8 +68,14 @@ namespace EntidadesAbstractas
         /// </summary>
         public ENacionalidad Nacionalidad
         {
-            get { return this.nacionalidad; }
-            set { nacionalidad = value; }
+            get
+            {
+                return this.nacionalidad;
+            }
+            set
+            {
+                nacionalidad = value;
+            }
         }
 
         /// <summary>
@@ -69,8 +87,14 @@ namespace EntidadesAbstractas
         /// </summary>
         public string Nombre
         {
-            get { return this.nombre; }
-            set { this.nombre = ValidarNombreApellido(value); }
+            get
+            {
+                return this.nombre;
+            }
+            set
+            {
+                this.nombre = ValidarNombreApellido(value);
+            }
         }
 
         /// <summary>
@@ -80,7 +104,10 @@ namespace EntidadesAbstractas
         /// </summary>
         public string StringToDNI
         {
-            set { this.dni = ValidarDni(this.nacionalidad, value); }
+            set
+            {
+                this.dni = ValidarDni(this.nacionalidad, value);
+            }
         }
 
 
@@ -189,18 +216,18 @@ namespace EntidadesAbstractas
         /// <returns>Retorna el dni validad, o si es invalido una excepcion </returns>
         private static int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
-     
+
 
             if (int.TryParse(dato, out int numero))
             {
-               return ValidarDni(nacionalidad, numero);
+                return ValidarDni(nacionalidad, numero);
             }
             else
             {
                 throw new DniInvalidoException("Se ingreso un dato invalido");
             }
 
-        
+
 
         }
 

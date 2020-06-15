@@ -97,9 +97,9 @@ namespace ClasesInstanciables
         {
             bool retorno = false;
 
-            foreach (Alumno i in g.alumnos)
+            foreach (Alumno alu in g.alumnos)
             {
-                if (i == a)
+                if (alu == a)
                 {
                     retorno = true;
                     break;
@@ -138,27 +138,14 @@ namespace ClasesInstanciables
         /// <returns>Retorna un profesor para la clase, o una excepcion si no hay</returns>
         public static Profesor operator ==(Universidad u, EClases clase)
         {
-            Profesor retorno = null;
-            bool flag = false;
-
-
-            foreach (Profesor p in u.profesores)
+            foreach (Profesor profesor in u.Instructores)
             {
-                if (p == clase)
+                if (profesor == clase)
                 {
-                    retorno = p;
-                    flag = true;
-                    break;
+                    return profesor;
                 }
             }
-
-            if (!flag)
-            {
-                throw new SinProfesorException();
-            }
-
-
-            return retorno;
+            throw new SinProfesorException();
 
         }
 
@@ -192,19 +179,14 @@ namespace ClasesInstanciables
         /// <returns>retorna un profesor que no pueda dar la clase</returns>
         public static Profesor operator !=(Universidad u, EClases clase)
         {
-            Profesor retorno = null;
-
-
-            foreach (Profesor p in u.profesores)
+            foreach (Profesor profesor in u.Instructores)
             {
-                if (p != clase)
+                if (profesor != clase)
                 {
-                    retorno = p;
-                    break;
+                    return profesor;
                 }
             }
-
-            return retorno;
+            throw new SinProfesorException();
         }
 
         /// <summary>
@@ -215,20 +197,26 @@ namespace ClasesInstanciables
         /// <returns>Retorna una jornada con profesor y alumnos</returns>
         public static Universidad operator +(Universidad g, EClases clase)
         {
-            int i;
-            Profesor p = g == clase;
-            g.jornada.Add(new Jornada(clase, p));
-            i = g.jornada.Count - 1;
-
-            foreach (Alumno a in g.alumnos)
+            try
             {
-                if (a == clase)
-                {
-                    g.jornada[i] += a;
-                }
-            }
+                Jornada nuevaJornada = new Jornada(clase, (g == clase));
 
-            return g;
+                foreach (Alumno alumno in g.Alumnos)
+                {
+                    if (alumno == nuevaJornada.Clase && nuevaJornada.Instructor.DNI != alumno.DNI)
+                    {
+                        nuevaJornada += alumno;
+                    }
+                }
+
+                g.jornada.Add(nuevaJornada);
+
+                return g;
+            }
+            catch (SinProfesorException e)
+            {
+                throw e;
+            }
         }
 
         /// <summary>
@@ -260,7 +248,7 @@ namespace ClasesInstanciables
         {
             if (u != i)
             {
-                u.profesores.Add(i);
+                u.Instructores.Add(i);
             }
             return u;
         }
@@ -270,13 +258,18 @@ namespace ClasesInstanciables
         /// </summary>
         /// <param name="u">Universidad a guardar</param>
         /// <returns>Retorna true si la universi</returns>
-        public static bool Guardar(Universidad u)
+        public static bool Guardar(Universidad uni)
         {
-            bool retorno = false;
-            Xml<Universidad> xml = new Xml<Universidad>();
-            xml.Guardar(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"/archivoXML.xml", u);
+            Xml<Universidad> writer = new Xml<Universidad>();
 
-            return retorno;
+            try
+            {
+                return writer.Guardar("UniversidadXML.xml", uni);
+            }
+            catch (Exception e)
+            {
+                throw new ArchivosException(e);
+            }
         }
 
         /// <summary>
@@ -285,39 +278,47 @@ namespace ClasesInstanciables
         /// <returns></returns>
         public Universidad Leer()
         {
-            Xml<Universidad> xml = new Xml<Universidad>();
-            xml.Leer(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"/archivoXML.xml", out Universidad u);
+            Xml<Universidad> reader = new Xml<Universidad>();
+            Universidad retorno = new Universidad();
 
-            return u;
+            try
+            {
+                reader.Leer("UniversidadXML.xml", out retorno);
+            }
+            catch (Exception e)
+            {
+                throw new ArchivosException(e);
+            }
 
-        }
+            return retorno;
 
-        /// <summary>
-        /// muestra una universidad
-        /// </summary>
-        /// <returns>Retorna una cadena con los datos de una universidad</returns>
-        public override string ToString()
-        {
-            return MostrarDatos(this);
         }
 
         /// <summary>
         /// Crea una cadena con los datos de una universidad
         /// </summary>
+        /// <returns>Retorna una cadena con los datos de una universidad</returns>
+        public override string ToString()
+        {
+            string CadenaDesalida = "";
+            CadenaDesalida += "JORNADA: \n";
+            foreach (Jornada jornada in this.Jornadas)
+            {
+                CadenaDesalida += jornada.ToString();
+                CadenaDesalida += "<-------------------------------------------------->" + "\n";
+            }
+
+            return CadenaDesalida;
+
+        }
+
+        /// <summary>
+        /// Muestra una universidad      
         /// <param name="uni">Universidad a mostrar</param>
         /// <returns>Retorna una cadena con los datos de la universidad</returns>
         private static string MostrarDatos(Universidad uni)
         {
-            string cadena;
-
-            cadena = "\nJORNADA:";
-            foreach (Jornada j in uni.jornada)
-            {
-                cadena += "\n" + j.ToString();
-                cadena += "<---------------------------------------------->";
-            }
-
-            return cadena;
+            return uni.ToString();
         }
     }
 }

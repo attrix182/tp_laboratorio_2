@@ -14,44 +14,46 @@ namespace Archivos
     public class Texto : IArchivo<string>
     {
         /// <summary>
-        /// 
+        /// Implementacion del metodo Guardar de la interfa IArchivos.
+        /// Se encargara de guardar los datos
         /// </summary>
-        /// <param name="archivo"></param>
-        /// <param name="datos"></param>
-        /// <returns></returns>
+        /// <param name="archivo">Ruta</param>
+        /// <param name="datos">Entrada de datos</param>
+        /// <returns>Retornara true si pudo</returns>
         public bool Guardar(string archivo, string datos)
         {
-            bool retorno = false;
+            bool retornoAux = false;
 
             try
             {
                 using (StreamWriter sw = new StreamWriter(archivo))
                 {
                     sw.WriteLine(datos);
-                    retorno = true;
+                    retornoAux = true;
 
                 }
 
             }
             catch (Exception e)
             {
-                Console.WriteLine("No se pudo guardar el archivo");
+                Console.WriteLine("No se pudo GUARDAR el Archivo");
                 throw new ArchivosException(e);
             }
 
-            return retorno;
+            return retornoAux;
         }
 
 
         /// <summary>
-        /// 
+        /// Implementacion del metodo Leer de la interface IArchivos
+        /// Se encargara de leer los archivos en formato txt
         /// </summary>
-        /// <param name="archivo"></param>
-        /// <param name="datos"></param>
-        /// <returns></returns>
+        /// <param name="archivo">Ruta</param>
+        /// <param name="datos">Salida de datos</param>
+        /// <returns>Retornara true si pudo</returns>
         public bool Leer(string archivo, out string datos)
         {
-            bool retorno = false;
+            bool retornoAux = false;
 
             try
             {
@@ -59,16 +61,16 @@ namespace Archivos
                 {
                     datos = sr.ReadToEnd();
 
-                    retorno = true;
+                    retornoAux = true;
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine("No se pudo leer el archivo");
+                Console.WriteLine("No se pudo LEER el Archivo");
                 throw new ArchivosException(e);
             }
 
-            return retorno;
+            return retornoAux;
         }
 
     }

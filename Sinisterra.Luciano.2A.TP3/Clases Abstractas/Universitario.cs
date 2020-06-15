@@ -13,7 +13,7 @@ namespace EntidadesAbstractas
         /// <summary>
         /// Constructor por defecto de la clase universitario
         /// </summary>
-        public Universitario():base()
+        public Universitario() : base()
         {
 
         }
@@ -39,16 +39,13 @@ namespace EntidadesAbstractas
         /// <returns>true si son iguales, falso si no lo son</returns>
         public override bool Equals(object obj)
         {
-            bool retorno = false;
-
+            bool retornoAux = false;
             if (obj is Universitario)
             {
-                if (this == (Universitario)obj)
-                {
-                    retorno = true;
-                }
+                if (((Universitario)obj).legajo == this.legajo || ((Universitario)obj).DNI == this.DNI)
+                    retornoAux = true;
             }
-            return retorno;
+            return retornoAux;
         }
 
         /// <summary>
@@ -57,9 +54,13 @@ namespace EntidadesAbstractas
         /// <returns>Retorna los datos de un universitario en formato cadena</returns>
         protected virtual string MostrarDatos()
         {
-            return base.ToString() + "\n\nLEGAJO NUMERO: " + this.legajo.ToString();
+            return base.ToString() + "\n\nLEGAJO NUMERO: " + this.legajo.ToString() + "\n";
         }
 
+        /// <summary>
+        /// Metodo abstracto que muestra la clase que toma determinada persona
+        /// </summary>
+        /// <returns></returns>
         protected abstract string ParticiparEnClase();
 
         /// <summary>
@@ -70,14 +71,7 @@ namespace EntidadesAbstractas
         /// <returns>Retorna true si son iguales, false en caso contrario</returns>
         public static bool operator ==(Universitario pg1, Universitario pg2)
         {
-            bool retorno = false;
-
-            if (pg1.GetType() == pg2.GetType() && (pg1.legajo == pg2.legajo || pg1.DNI == pg2.DNI))
-            {
-                retorno = true;
-            }
-
-            return retorno;
+            return pg1.Equals(pg2);
         }
 
         /// <summary>

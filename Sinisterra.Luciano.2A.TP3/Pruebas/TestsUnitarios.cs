@@ -5,13 +5,12 @@ using ClasesInstanciables;
 using Excepciones;
 using EntidadesAbstractas;
 
-
-
 namespace Pruebas
 {
     [TestClass]
     public class TestsUnitarios
     {
+        //TP3 Sinisterra Luciano 2A
 
         /// <summary>
         /// Test unitario que crea un Alumno con un DNI invalido y prueba la excepcion DniInvalidoException
@@ -88,11 +87,6 @@ namespace Pruebas
         }
 
 
-
-
-
-
-
         /// <summary>
         /// Test que mediante AllItemsAreNotNull, Comprueba si todos los elementos de la colección Alumnos
         /// no son nulos.
@@ -106,8 +100,6 @@ namespace Pruebas
             CollectionAssert.AllItemsAreNotNull(uni.Alumnos);
 
         }
-
-
 
 
         /// <summary>
@@ -136,6 +128,11 @@ namespace Pruebas
 
             CollectionAssert.AllItemsAreNotNull(uni.Instructores);
         }
+
+
+
+
+
 
 
 

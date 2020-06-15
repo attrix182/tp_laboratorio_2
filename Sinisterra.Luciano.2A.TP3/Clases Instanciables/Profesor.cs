@@ -13,16 +13,22 @@ namespace ClasesInstanciables
         private Queue<Universidad.EClases> clasesDelDia;
         private static Random random;
 
+
+        public Profesor() : base()
+        {
+            clasesDelDia = new Queue<Universidad.EClases>();
+            _randomClases();
+
+        }
+
+        /// <summary>
+        /// Constructor estático que inicializa random
+        /// </summary>
         static Profesor()
         {
             random = new Random();
-
         }
 
-        private Profesor()
-        {
-
-        }
 
         public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad) : base(id, nombre, apellido, dni, nacionalidad)
         {
@@ -35,9 +41,8 @@ namespace ClasesInstanciables
         /// </summary>
         private void _randomClases()
         {
-            Universidad.EClases aux;
-            aux = (Universidad.EClases)Profesor.random.Next(1, 4);
-            this.clasesDelDia.Enqueue(aux);
+            this.clasesDelDia.Enqueue((Universidad.EClases)random.Next(1, 4));
+            this.clasesDelDia.Enqueue((Universidad.EClases)random.Next(1, 4));
 
         }
 
@@ -47,15 +52,16 @@ namespace ClasesInstanciables
         /// <returns>Retorna una cadena con la/s clase/s que da un profesor</returns>
         protected override string ParticiparEnClase()
         {
-            string cadena = "";
-            int tam = this.clasesDelDia.Count;
+            string CadenaDeSalida = " \nCLASES DEL DIA: \n";
 
-            foreach (Universidad.EClases unaClase in this.clasesDelDia)
+            foreach (Universidad.EClases clase in this.clasesDelDia)
             {
-                cadena += "\n" + Enum.GetName(typeof(Universidad.EClases), unaClase);
+                CadenaDeSalida += clase + "\n";
             }
 
-            return "\nCLASES DEL DIA " + cadena;
+            CadenaDeSalida += "\n";
+
+            return CadenaDeSalida;
         }
 
         /// <summary>
@@ -78,9 +84,9 @@ namespace ClasesInstanciables
         {
             bool retornoAux = false;
 
-            foreach (Universidad.EClases c in i.clasesDelDia)
+            foreach (Universidad.EClases claseDelProfesor in i.clasesDelDia)
             {
-                if (c == clase)
+                if (claseDelProfesor == clase)
                 {
                     retornoAux = true;
                     break;
@@ -108,7 +114,7 @@ namespace ClasesInstanciables
         /// <returns>Retorna una cadena con los datos de un profesor</returns>
         public override string ToString()
         {
-            return this.MostrarDatos();
+            return MostrarDatos();
         }
 
     }

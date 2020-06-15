@@ -105,7 +105,7 @@ namespace ClasesInstanciables
         /// <returns>Retorna la jornada con el alumno, si esta repetido una excepcion</returns>
         public static Jornada operator +(Jornada j, Alumno a)
         {
-            if (!(j == a))
+            if (j != a)
             {
                 j.alumnos.Add(a);
             }
@@ -142,9 +142,16 @@ namespace ClasesInstanciables
         /// <returns>True si la jornada es valida</returns>
         public static bool Guardar(Jornada jornada)
         {
-            Texto txt = new Texto();
-            //Arreglar ruta
-            return txt.Guardar(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"/ArchivoTXT.txt", jornada.ToString());
+            Texto writer = new Texto();
+
+            try
+            {
+                return writer.Guardar("JornadaTXT.txt", jornada.ToString());
+            }
+            catch (Exception e)
+            {
+                throw new ArchivosException(e);
+            }
         }
 
         /// <summary>
@@ -153,22 +160,20 @@ namespace ClasesInstanciables
         /// <returns>Retorna los datos como cadena</returns>
         public static string Leer()
         {
-            string linea = "";
+            Texto reader = new Texto();
+            string retorno;
+
             try
             {
-                Texto txt = new Texto();
-                txt.Leer(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"/ArchivoTXT.txt", out linea);
-
+                reader.Leer("JornadaTXT.txt", out retorno);
             }
-            catch (ArchivosException a)
+            catch (Exception e)
             {
-                Console.WriteLine(a);
+                throw new ArchivosException(e);
             }
 
-            return linea;
+            return retorno;
+
         }
-
-
-
     }
 }
