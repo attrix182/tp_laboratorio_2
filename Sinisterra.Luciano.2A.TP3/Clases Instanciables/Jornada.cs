@@ -102,18 +102,14 @@ namespace ClasesInstanciables
         /// </summary>
         /// <param name="j">Jornada</param>
         /// <param name="a">Alumno</param>
-        /// <returns>Retorna la jornada con el alumno, si esta repetido una excepcion</returns>
+        /// <returns>Retorna la jornada con el alumno, si no estaba agregado anteriormente</returns>
         public static Jornada operator +(Jornada j, Alumno a)
         {
             if (j != a)
             {
                 j.alumnos.Add(a);
             }
-            else
-            {
-                throw new AlumnoRepetidoException();
-            }
-
+          
             return j;
         }
 
