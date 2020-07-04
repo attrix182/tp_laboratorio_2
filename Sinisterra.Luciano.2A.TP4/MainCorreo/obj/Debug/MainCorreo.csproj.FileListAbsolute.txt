@@ -1,0 +1,14 @@
+C:\Users\lucho\source\repos\Sinisterra.Luciano.2A.TP4\MainCorreo\bin\Debug\MainCorreo.exe.config
+C:\Users\lucho\source\repos\Sinisterra.Luciano.2A.TP4\MainCorreo\bin\Debug\MainCorreo.exe
+C:\Users\lucho\source\repos\Sinisterra.Luciano.2A.TP4\MainCorreo\bin\Debug\MainCorreo.pdb
+C:\Users\lucho\source\repos\Sinisterra.Luciano.2A.TP4\MainCorreo\obj\Debug\MainCorreo.csprojAssemblyReference.cache
+C:\Users\lucho\source\repos\Sinisterra.Luciano.2A.TP4\MainCorreo\obj\Debug\MainCorreo.Properties.Resources.resources
+C:\Users\lucho\source\repos\Sinisterra.Luciano.2A.TP4\MainCorreo\obj\Debug\MainCorreo.csproj.GenerateResource.cache
+C:\Users\lucho\source\repos\Sinisterra.Luciano.2A.TP4\MainCorreo\obj\Debug\MainCorreo.csproj.CoreCompileInputs.cache
+C:\Users\lucho\source\repos\Sinisterra.Luciano.2A.TP4\MainCorreo\obj\Debug\MainCorreo.exe
+C:\Users\lucho\source\repos\Sinisterra.Luciano.2A.TP4\MainCorreo\obj\Debug\MainCorreo.pdb
+C:\Users\lucho\source\repos\Sinisterra.Luciano.2A.TP4\MainCorreo\bin\Debug\Entidades.dll
+C:\Users\lucho\source\repos\Sinisterra.Luciano.2A.TP4\MainCorreo\bin\Debug\Entidades.pdb
+C:\Users\lucho\source\repos\Sinisterra.Luciano.2A.TP4\MainCorreo\bin\Debug\Entidades.dll.config
+C:\Users\lucho\source\repos\Sinisterra.Luciano.2A.TP4\MainCorreo\obj\Debug\MainCorreo.FrmPpal.resources
+C:\Users\lucho\source\repos\Sinisterra.Luciano.2A.TP4\MainCorreo\obj\Debug\MainCorreo.csproj.CopyComplete
